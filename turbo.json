@@ -2,7 +2,7 @@
   "$schema": "https://turbo.build/schema.json",
   "globalEnv": ["NODE_ENV"],
   "globalDependencies": ["**/.env.*local"],
-  "pipeline": {
+  "tasks": {
     "build": {
       "dependsOn": ["^db:generate", "^db:migrate:deploy", "^build"],
       "outputs": ["dist/**", ".next/**", "!.next/cache/**"]
